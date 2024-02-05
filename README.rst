@@ -1,6 +1,25 @@
 ===========
 gpiozerorpi
 ===========
+I had to rewrite an old Python program using RPi.GPIO. As a hardware developer accustomed 
+to working with clear '0' and '1' values and being faster at rewriting, 
+I created subclassed GPOut and GBIn wth definition low and hihg. 
+This decision was made because LEDs and bBttons were causing confusion.
+For instance, there's a chip select with an active-low logic, which corresponds to led.off, 
+effectively meaning that the chip is not selected.
+
+
+Author addOn: "Claudius Viviani" 
+cv@ntx.ch
+
+Added Kommands GPOut.low()    and  GPOut.high()  
+like  led.off() - "is same like low"  
+and
+led.on() - "is same like high"  
+Added  GPin - same as Button
+
+
+
 
 A simple interface to GPIO devices with `Raspberry Pi`_, developed and
 maintained by `Ben Nuttall`_ and `Dave Jones`_.
